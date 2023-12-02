@@ -1,0 +1,179 @@
+<!--
+Tekijä: Taru Peltonen
+16.6.2023
+teht17a-e
+-->
+
+<!-- tehdään sivu käyttäen hyväksi Bootstrap:ia -->
+
+<!DOCTYPE html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    /* tyylimuotoilu */
+    .navbar-brand img {
+      height: 32px; /* korkeus */
+    /*  width: 768px;*/
+    }
+  
+    .table {
+      border-collapse: separate;
+      border-spacing: 4px;
+    }
+
+    .table td {
+      padding: 4px;
+    }
+
+    .table a {
+      text-decoration: underline;
+    }
+
+    .copyable {
+      user-select: all;
+      -webkit-user-select: all;
+      -moz-user-select: all;
+      -ms-user-select: all;
+    }
+
+     /* Poista luettelomerkit */
+  .footer-links li {
+    list-style: none;
+  }
+
+   /* Lisää alleviivaus linkkeihin */
+   .footer-links a {
+    text-decoration: underline;
+  }
+  </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-md navbar-light bg-light">
+      <a class="navbar-brand" href="#">
+        <!-- lisätään savonian logo -->
+          <img src="savoniaLogo.png" alt="Savonia Logo">
+        </a>
+        <!-- lisätään laatikot tunnus ja salasana -->
+        <form class="form-inline mr-auto">
+            <input class="form-control mr-sm-2" type="text" placeholder="Tunnus">
+            <input class="form-control mr-sm-2" type="password" placeholder="Salasana">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Kirjaudu</button>
+          </form>
+
+          <!-- lisätään navigointi -->
+         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+      aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- lisätään navigointi alueeseen menu osiot -->
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="#">Alkuun</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Wilma</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Reppu</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Työkalut</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-4">
+        <form>
+          <div class="form-group">
+            <label for="opiskelijanumero">Opiskelijanumero</label>
+            <input type="text" class="form-control" id="opiskelijanumero" placeholder="Opiskelijanumero">
+          </div>
+          <div class="form-group">
+            <label for="aloitusvuosi">Aloitusvuosi</label>
+            <input type="text" class="form-control" id="aloitusvuosi" placeholder="Aloitusvuosi">
+          </div>
+          <button type="submit" class="btn btn-primary">Tarkista</button>
+        </form>
+      </div>
+      <div class="col-md-8">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Opintojakso</th>
+              <th>Suorituspvm</th>
+              <th>Arvosana</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Ohjelmoinnin perusteet</td>
+              <td>3.4.2016</td>
+              <td>2/5</td>
+            </tr>
+            <tr>
+              <td>Tietorakenteet ja algoritmit</td>
+              <td>16.2.2016</td>
+              <td>5/5</td>
+            </tr>
+            <tr>
+              <td>Matematiikka I</td>
+              <td>28.1.2015</td>
+              <td>4/5</td>
+            </tr>
+            <tr>
+              <td>Matematiikka II</td>
+              <td>11.9.2015</td>
+              <td>3/5</td>
+            </tr>
+            <tr>
+              <td>Fysiikka I</td>
+              <td>28.11.2014</td>
+              <td>4/5</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md">
+          <div class="footer-column">
+            <p>@ 2017-2018</p>
+          </div>
+        </div>
+        <div class="col-md">
+          <div class="footer-column">
+            <h4>Toimipaikat</h4>
+            <ul class="footer-links">
+              <li><a href="#">Opistotie</a></li>
+              <li><a href="#">Technopolis</a></li>
+              <li><a href="#">Iisalmi</a></li>
+              <li><a href="#">Varkaus</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md">
+          <div class="footer-column">
+            <h4>Tietoja</h4>
+            <ul class="footer-links">
+              <li><a href="#">Yhteystiedot</a></li>
+              <li><a href="#">GRPD</a></li>
+              <li><a href="#">Ota yhteyttä</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
